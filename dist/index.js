@@ -5700,6 +5700,8 @@ async function downloadAndInstall(version) {
 
 
 const domains = core.getInput('domains', { required: true });
+const list = core.getInput('list', { required: false});
+const config = core.getInput('config', { required: false});
 const passive = core.getBooleanInput('passive', { required: false });
 const brute = core.getBooleanInput('brute', { required: false });
 const output = core.getInput('output', { required: false });
@@ -5725,6 +5727,8 @@ async function run() {
 
         // Setting up params
         params.push(`-d=${domains}`);
+	params.push(`-df=${config}`);
+	params.push(`-config=${config}`);
         if (passive) params.push('-passive');
         if (brute) params.push('-brute');
         params.push(`-o=${output ? output : 'amass.txt'}`);
