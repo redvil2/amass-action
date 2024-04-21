@@ -12,6 +12,12 @@ inputs:
   list:
     description: "List of domains to run subdomain enumeration"
     required: false
+    default: false
+
+  config:
+    description: "Config file to use for subdomain enumeration"
+    required: false
+    default: false
 
   passive:
     description: "Disable DNS resolution of names and dependent features"
