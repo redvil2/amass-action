@@ -9,6 +9,10 @@ inputs:
     description: "Domain names separated by commas (can be used multiple times)"
     required: true
 
+  list:
+    description: "List of domains to run subdomain enumeration"
+    required: false
+
   passive:
     description: "Disable DNS resolution of names and dependent features"
     required: false
